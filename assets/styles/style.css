@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* pokemon data */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffebcd;
+  border-radius: 10px;
+  padding: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background-color 0.3s;
+}
+
+.card:hover {
+  background-color: #ffd28a;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.page-info {
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+/* modal pokemon */
+.modal {
+  display: none; /* Sembunyikan modal secara default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.close-btn {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-text {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #444;
+}
+
+#modalName {
+  text-align: center;
+}
+
+#modalImage {
+  display: block;
+  /* max-width: 150px; */
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .search-bar {
+    padding: 8px;
+  }
+
+  .card {
+    padding: 15px;
+    height: 80px;
+  }
+
+  .button {
+    padding: 8px 15px;
+  }
+
+  .page-info {
+    font-size: 0.9rem;
+  }
+}

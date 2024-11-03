@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Pokédex</h1>
+      <input
+        type="text"
+        id="searchBar"
+        class="search-bar"
+        placeholder="Search Pokémon"
+      />
+
+      <div class="grid-container" id="pokemonGrid">
+        <!-- Kartu Pokémon akan dimasukkan di sini -->
+      </div>
+
+      <div class="pagination">
+        <button id="prevPage" class="button">Previous</button>
+        <span id="pageInfo" class="page-info">Page 1</span>
+        <button id="nextPage" class="button">Next</button>
+      </div>
+    </div>
+
+    <!-- Modal box untuk detail Pokemon -->
+    <div id="pokemonModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <h2 id="modalName"></h2>
+        <img id="modalImage" src="" alt="Pokemon Image" />
+
+        <p class="modal-text">
+          <strong>Height:</strong>
+          <span id="modalHeight"></span>
+        </p>
+
+        <p class="modal-text">
+          <strong>Weight:</strong>
+          <span id="modalWeight"></span>
+        </p>
+
+        <p class="modal-text">
+          <strong>Abilities:</strong>
+          <span id="modalAbilities"></span>
+        </p>
+      </div>
+    </div>
+
+    <script src="./assets/javascript/script.js"></script>
+    <script src="./assets/javascript/modal.js"></script>
+  </body>
+</html>
